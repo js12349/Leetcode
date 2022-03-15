@@ -19,7 +19,7 @@ class Solution(object):
         """
         
         
-        """Fastest way (48 ms):"""
+        """Fastest way:"""
         
         num_index = {}
         for idx, num in enumerate(nums):
