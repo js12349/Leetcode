@@ -5,6 +5,7 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
+        """
         idx = 0
         for num in nums:
             idx2 = idx + 1
@@ -13,3 +14,11 @@ class Solution(object):
                     return [idx,idx2]
                 idx2 += 1
             idx += 1
+        """
+        num_index = {}
+        for idx, num in enumerate(nums):
+            compl = target - num
+            if compl in num_index:
+                return [idx, num_index[compl]]
+            else:
+                num_index[num] = idx
