@@ -6,6 +6,8 @@ class Solution(object):
         :rtype: List[int]
         """
         """
+        Brute force (3616ms):
+        
         idx = 0
         for num in nums:
             idx2 = idx + 1
@@ -16,6 +18,9 @@ class Solution(object):
             idx += 1
         """
         
+        
+        """Fastest way (48 ms):"""
+        
         num_index = {}
         for idx, num in enumerate(nums):
             compl = target - num
@@ -25,6 +30,8 @@ class Solution(object):
                 num_index[num] = idx
         
         """
+        Another way (431 ms):
+        
         for idx, num in enumerate(nums):
             compl = target - num
             rest_nums = nums[(idx+1):]
