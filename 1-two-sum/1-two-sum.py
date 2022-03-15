@@ -23,8 +23,9 @@ class Solution(object):
         
         num_index = {}
         for idx, num in enumerate(nums):
-            if target - num in num_index:
-                return [idx, num_index[target - num]]
+            compl = target - num
+            if compl in num_index:
+                return [idx, num_index[compl]]
             else:
                 num_index[num] = idx
         
