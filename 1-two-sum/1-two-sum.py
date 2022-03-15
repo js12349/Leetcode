@@ -15,7 +15,7 @@ class Solution(object):
                 idx2 += 1
             idx += 1
         """
-        """
+        
         num_index = {}
         for idx, num in enumerate(nums):
             compl = target - num
@@ -23,12 +23,11 @@ class Solution(object):
                 return [idx, num_index[compl]]
             else:
                 num_index[num] = idx
+        
         """
-        #num_index = {}
         for idx, num in enumerate(nums):
             compl = target - num
             rest_nums = nums[(idx+1):]
             if compl in rest_nums:
                 return [idx, rest_nums.index(compl) + idx + 1]
-            #else:
-            #    num_index[num] = idx
+        """
