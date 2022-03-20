@@ -13,8 +13,6 @@ class Solution(object):
             if char not in substr:
                 substr += char
                 maxlen = max(maxlen, len(substr))
-                #print(maxlen)
             else:
                 substr = substr.split(char)[1] + char
-        
         return maxlen
