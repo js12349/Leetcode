@@ -4,14 +4,17 @@ class Solution(object):
         :type s: str
         :rtype: int
         """
+        if len(set(s)) == len(s):
+            return len(s)
         
-        lst = [0]
-        for start in range(len(s)):
-            sub = s[start]
-            for end in s[(start+1):]:
-                if end not in sub:
-                    sub += end
-                else:
-                    break
-            lst.append(len(sub))
-        return max(lst)
+        substr = ""
+        maxlen = 0
+        for char in s:
+            if char not in substr:
+                substr += char
+                maxlen = max(maxlen, len(substr))
+                #print(maxlen)
+            else:
+                substr = substr.split(char)[1] + char
+        
+        return maxlen
