@@ -6,6 +6,6 @@ class Solution(object):
         """
         ret = [nums[0]]
         
-        for n in range(1, len(nums)):
-            ret.append(ret[-1] + nums[n])
+        for n in nums[1:]:
+            ret.append(ret[-1] + n)
         return ret
