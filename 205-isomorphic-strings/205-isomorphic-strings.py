@@ -5,6 +5,7 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
+        """
         if len(s) != len(t):
             return False
         
@@ -22,4 +23,5 @@ class Solution(object):
             elif t[idx] in _map_t_to_s and _map_t_to_s[t[idx]] != s[idx]:
                 return False
         return True
-        
+        """
+        return len(set(s)) == len(set(t)) == len(set(zip(s, t)))
