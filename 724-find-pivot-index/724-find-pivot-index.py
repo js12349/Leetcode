@@ -8,9 +8,6 @@ class Solution(object):
         left = 0
         right = sum(nums)
         
-        #if left == right:
-        #    return -1
-        
         for n in range(0, len(nums)):
             if n != 0:
                 left += nums[n-1]
