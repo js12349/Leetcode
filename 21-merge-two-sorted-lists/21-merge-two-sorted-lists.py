@@ -6,8 +6,6 @@
 
 class Solution(object):
     def mergeTwoLists(self, list1, list2):
-        #[5]
-        #[1,2,4]
         if list1 == None and list2 == None:
             return None
         
