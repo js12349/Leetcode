@@ -15,10 +15,10 @@ class Solution(object):
         if list1 != None and list2 == None:
             return list1
         
-        head = ListNode()
+        head = ListNode(-1)
         node = head
         
-        while True:
+        while list1 and list2:
             if list1.val < list2.val:
                 node.val = list1.val
                 list1 = list1.next
